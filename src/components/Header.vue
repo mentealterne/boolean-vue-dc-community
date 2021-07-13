@@ -1,5 +1,4 @@
 <template>
-
   <header class="container">
     <nav>
       <div class="logo">
@@ -22,46 +21,53 @@
       </div>
     </nav>
   </header>
-
 </template>
 
 <script>
 export default {
-  name: "Header",
+  name: 'Header',
+  data: function() {
+    //TODO: stampare il menu dinamicamente dai data
+    /* menuLinks: [
+      {
+        href: '#',
+        name: 'CHARACTERS',
+      },
+      {},
+      {},
+    ]; */
+  },
 };
 </script>
 
-
 <style scoped lang="scss">
-
-@import "../style/colors";
+@import '../style/colors';
 
 header {
   height: 80px;
   padding: 10px 0;
-  
+
   nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    img{
+    img {
       height: 60px;
     }
 
-    ul{
+    ul {
       display: flex;
 
-      li{
-
-        a{
+      li {
+        a {
           color: black;
           font-family: 'Roboto Condensed', sans-serif;
           font-weight: bold;
           margin-left: 24px;
           padding-bottom: 23px;
 
-          &:hover{
+          &:hover {
             color: $dc-blue-color;
             border-bottom: 5px solid $dc-blue-color;
           }
@@ -70,6 +76,4 @@ header {
     }
   }
 }
-
-
 </style>

@@ -1,13 +1,17 @@
 <template>
   <main>
-    <Card
-      v-for="(element, index) in comics"
-      :key="index"
-      :thumb="element.thumb"
-      :price="element.price"
-      :title="element.series"
-      :type="element.type"
-    />
+    <div class="container">
+      <div class="row">
+        <Card
+          v-for="(element, index) in comics"
+          :key="index"
+          :thumb="element.thumb"
+          :price="element.price"
+          :title="element.series"
+          :type="element.type"
+        />
+      </div>
+    </div>
   </main>
 </template>
 
@@ -33,8 +37,6 @@ export default {
 
 main {
   background-color: black;
-  height: 80px;
   color: $text-white;
-  z-index: 1;
 }
 </style>
